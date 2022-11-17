@@ -48,33 +48,10 @@ public class JohnCena {
     }
 
     public static boolean isPalindrome(int value){
-        String str = Integer.toString(value);
-        int mid = (str.length()/2) -1;
-        boolean xy = true; 
-        if(str.length()%2 == 0){
-            xy = false;
+        if(reverse(value) == value){
+            return true;
         }
-        int buff1 = 0;
-        int buff2 = 0;
-        if(xy){
-            for(int x = 0; x < mid; x++){
-                buff1 = Integer.parseInt(Character.toString(str.charAt(x)));
-                buff2 = Integer.parseInt(Character.toString(str.charAt(str.length()-x-1)));
-                if(buff1 != buff2){
-                    return false;
-                }
-            }
-        }else{
-            for(int x = 0; x <= mid; x++){
-                buff1 = Integer.parseInt(Character.toString(str.charAt(x)));
-                buff2 = Integer.parseInt(Character.toString(str.charAt(str.length()-x-1)));
-                if(buff1 != buff2){
-                    return false;
-                }
-            }
-        }
-        
-        return true;
+        return false;
     }
 
     public static boolean isPrime(int value){
